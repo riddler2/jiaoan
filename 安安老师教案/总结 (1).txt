@@ -1,0 +1,261 @@
+1.js 是一门什么语言：
+  解析型语言
+  动态语言
+  弱类型语言
+
+
+2.页面的组成
+   html  结构
+   css     样式
+   js        行为
+
+   js的组成：
+   ES      DOM       BOM
+
+3.输出方式：
+   1.alert("");  弹框
+   2.console.log();控制台打印
+   3.document.write();页面中输出
+
+4.引入js方式：
+   1.在html中直接在script标签中写入js内容   <script>js内容</script>
+   2.引入外部的js文件，在js中写入内容   <script src="url"></script>
+   3.在标签中直接写入js代码
+
+5.基本语法：
+   1.严格区分大小写
+   2.每一句话结束之后，使用分号表示；
+   3.注释  //     /**/
+
+6. 变量/常量：
+   作用：1.存储数据   2.操作数据
+    ES3  ES5    
+    var    
+   1.可以重新赋值
+   2. 预编译，变量提升
+
+   ES6
+   let  
+   1.可以重新赋值
+   2.不可以变量提升
+
+   const   常量   不可改变的量
+   1.不可以重新赋值
+   2.不可以常量提升     
+
+7.数据类型：
+   基本数据类型：
+   number  string  boolean  null undefined  syblom()
+
+   引用数据类
+   object
+
+8.检查数据类型  typeof
+   number string  boolean  undefined   object   function 
+
+9.数据类型的转换
+   字符串：
+   toString(); 不能转换null和undefined
+   String();
+   toFixed();
+
+   数字类型：
+   Number();   
+   parseInt();
+   parseFloat();
+
+   布尔值：
+   Boolean();
+
+10.运算符
+  1.算数运算符
+     % 求模
+     ++  -- 一元操作符
+     前置：先自身操作，再进行运算
+     后置：先进行运算，再自身操作
+  2.逻辑运算符
+     与&&     或||      非！
+     非：无论操作什么数据类型，返回的都是布尔值
+     与：只要有一个为false则返回false
+            1.如果第一个操作数隐式转换为true，则返回第二个操作数；
+            2.如果第一个操作数隐式转换为false，则返回第一个操作数；
+     或：只有有一个为true则返回true
+            1.如果第一个操作数隐式转换为true，则返回第一个操作数；
+            2.如果第一个操作数隐式转换为false，则返回第二个操作数；
+  3.赋值运算符
+    =
+    +=  -=  
+    num+=5   =>   num = num+5
+  4.比较运算符
+     ==    比较值的大小
+     ===   比较的是值的大小和数据类型
+
+     ！=
+     ！==
+
+  5.三元运算符
+     3>5?"对"："不对"
+
+11.语句
+     分支：
+     判断语句：
+     if        范围
+     switch       值
+     循环：
+     for(var i=11;i<=10;i++){}
+     while()  先判断，再执行
+     do... while()   先执行一次，再进行判断
+
+     continue  结束本次循环
+     break    跳出整个循环
+
+12.字符串：
+     1.创建
+         1.let str = "123";
+         2.let str1 = new String();
+      2.属性：
+         length
+      3.方法：（）
+         String.fromCharCode(字符编码)
+         "ABC".charCodeAt(); 默认是0，找到对应位置字符进行转码；
+
+         str.toUpperCase();
+         str.toLowerCase();
+
+         str1.concat(str2);拼接
+         str1+str2;
+
+         str.charAt(索引值);根据索引值找对应字符
+
+         截取：
+         1.slice();
+            1.如果是一个参数，则表示从该位置开始一直截取到最后
+            2.如果是两个参数。第一个参数表示开始的位置，第二个参数表示结束的位置，但是不包括（含头不含尾）；
+            3.如果参数为负数时，字符串的长度加这个值，所得的这个值，开始截取；
+            4.如果第一个参数大于第二个参数，返回一个空字符串
+         2.substring();
+            1.如果是一个参数，则表示从该位置开始一直截取到最后
+            2.如果是两个参数。第一个参数表示开始的位置，第二个参数表示结束的位置，但是不包括（含头不含尾）；
+            3.如果参数是负数，这个参数转为0；
+            4.如果第一个参数大于第二个参数，交换两个参数的位置
+         3.substr();
+            1.如果是一个参数，则表示从该位置开始一直截取到最后
+            2.如果是两个参数。第一个参数表示开始的位置，第二个参数表示截取的个数；
+            3.如果参数是负数，字符串的长度加这个值，所得的这个值，开始截取；
+        
+        查找关键字：
+        1.indexOf();根据字符查找第一个对应的索引值；
+           如果找不到则返回-1；
+           如果有两个参数，第一个是查找的字符，第二个参数是查找的开始位置；
+        2.lastIndexOf();
+
+        3.includes();   布尔值
+
+        字符串转数组：
+        str.split();
+        数组转字符串
+        arr.join();
+
+  13.   数组：
+          1.创建：
+             1.字面量
+                 let  arr = [];
+             2.构造函数
+                 let  arr = new Array();
+           2.length
+              
+           3.改变原数组的方法：
+              pop()   
+              push()
+              shift()
+              unshift()  
+              splice() 
+              reverse()
+              sort(function(a,b0{return a-b}));
+          
+            4.不改变原数组的方法（字符串也可以使用的方法）
+               1.indexOf();
+                  lastIndexOf();
+               2.concat();
+               3.slice();
+               4.includes();
+            5.ES5：
+               forEach(function(){}) 没有返回值，操作  for
+               map(function(){}) 有返回值
+               filter() 筛选
+               reduce()/reduceRight()
+               some()/every()
+            6.ES6
+               Array.from()  伪数组变真数组
+               Array.of() 一组值变为数组
+               find 查找第一个符合条件的元素
+               findIndex() 查找第一个符合条件元素的索引值
+               fill() 填充     第一个值是填充的内容   第二个值是开始的位置，第三个之是结束的位置（不含）
+
+  14.对象：
+      1.创建
+          1.字面量
+              var obj = {};
+          2.构造函数
+              var obj = new Object();
+      2.一组无序的键值对集合
+      3.访问/读取属性：
+         1.点操作符
+         2.方括号
+      4.赋值
+      5.修改值
+      6.属性是否存在   in
+      7. 检测：obj  instanceof  Object
+      8.删除  delete
+
+  15.函数：
+        1.创建：
+           函数声明：有预编译
+           function fn (){}；
+           
+           函数表达式：不可以提前调用
+           var  fn = function (){}；
+           
+           构造函数：
+        2.参数：
+           形参
+           实参
+           agruments
+        3.return (工厂函数)
+           如果return后面没有返回值，得到undefined；
+           return 之后的语句不执行；
+           return 后面不接值，可以表示结束；
+        4.作用域
+           js没有块级作用域；
+           全局作用域，局部作用域（函数作用域）
+           全局作用下定义得变量，在任何地方都可以使用；
+           局部作用域定义得变量，在全局作用域不可以进行访问；
+
+           作用域链：
+           现在本域进行一个查找，如果没有就逐级向上查找，一直到全局作用域下，如果全局作用域中也没有，就会报错；
+
+   16. 日期：
+         1.new Date();
+         2.get:
+            var year = x.getFullYear();
+            var month = x.getMonth();
+            var day = x.getDate();
+            var week = x.getDay();
+            var hour = x.getHours();
+            var min = x.getMinutes();
+            var sec = x.getSeconds();
+
+
+
+
+        
+
+       
+        
+
+
+               
+
+
+
+
